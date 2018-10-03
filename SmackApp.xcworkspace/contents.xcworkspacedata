@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/danielgarofalo/Documents/Development/AppDev/IOS/Devslopes/Section11.SmackApp/SmackApp/SmackApp/Controller/ChannelViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:SmackApp.xcodeproj">
    </FileRef>
    <FileRef
