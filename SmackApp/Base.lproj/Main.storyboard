@@ -31,7 +31,7 @@
         <!--Channel View Controller-->
         <scene sceneID="E5H-Gr-TcZ">
             <objects>
-                <viewController id="Ofc-yP-0oj" customClass="ChannelViewController" sceneMemberID="viewController">
+                <viewController id="Ofc-yP-0oj" customClass="ChannelViewController" customModule="SmackApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QWc-mg-nS3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

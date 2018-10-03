@@ -12,18 +12,11 @@ class ChannelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //This will modify the amount of the view controller that will not be displayed. In this case, the whole frame - 60 pixels
+        self.revealViewController()?.rearViewRevealWidth = self.view.frame.size.width - 60
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }

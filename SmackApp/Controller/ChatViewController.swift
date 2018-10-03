@@ -17,7 +17,12 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //This allows for the button to move this very same VC iun order to reveal the VC that is in the back
         menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+        
+        //These two allow for this same vc to be dragged and tapped to the original position
+        self.view.addGestureRecognizer((self.revealViewController()?.panGestureRecognizer())!)
+        self.view.addGestureRecognizer((self.revealViewController()?.tapGestureRecognizer())!)
     }
     
     
