@@ -14,6 +14,7 @@
 		8C16B212216500BB00C524B4 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C16B211216500BB00C524B4 /* ChannelViewController.swift */; };
 		8C38E3772166CB61004FDDB0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38E3762166CB61004FDDB0 /* Constants.swift */; };
 		8C38E3792166D080004FDDB0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38E3782166D080004FDDB0 /* LoginViewController.swift */; };
+		8C38E37B2167B1EE004FDDB0 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38E37A2167B1EE004FDDB0 /* CreateAccountViewController.swift */; };
 		8C475AD12164282000454EE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C475AD02164282000454EE7 /* AppDelegate.swift */; };
 		8C475AD62164282000454EE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C475AD42164282000454EE7 /* Main.storyboard */; };
 		8C475AD82164282000454EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C475AD72164282000454EE7 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		8C16B211216500BB00C524B4 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChannelViewController.swift; path = /Users/danielgarofalo/Documents/Development/AppDev/IOS/Devslopes/Section11.SmackApp/SmackApp/SmackApp/Controller/ChannelViewController.swift; sourceTree = "<absolute>"; };
 		8C38E3762166CB61004FDDB0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8C38E3782166D080004FDDB0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8C38E37A2167B1EE004FDDB0 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		8C475ACD2164282000454EE7 /* SmackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C475AD02164282000454EE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C475AD52164282000454EE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				8C16B20F2164FF1500C524B4 /* ChatViewController.swift */,
 				8C16B211216500BB00C524B4 /* ChannelViewController.swift */,
 				8C38E3782166D080004FDDB0 /* LoginViewController.swift */,
+				8C38E37A2167B1EE004FDDB0 /* CreateAccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				8C475AD12164282000454EE7 /* AppDelegate.swift in Sources */,
 				8C16B2102164FF1500C524B4 /* ChatViewController.swift in Sources */,
 				8CC7E2582166512600635095 /* GradientView.swift in Sources */,
+				8C38E37B2167B1EE004FDDB0 /* CreateAccountViewController.swift in Sources */,
 				8C16B212216500BB00C524B4 /* ChannelViewController.swift in Sources */,
 				8C16B20B21642ECC00C524B4 /* SWRevealViewController.m in Sources */,
 				8C38E3772166CB61004FDDB0 /* Constants.swift in Sources */,
