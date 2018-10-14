@@ -37,8 +37,18 @@ class CreateAccountViewController: UIViewController {
         
         //Pass both fields on the registration. To get extra values on the completion handler(which will be the third value that needs to be passed) just press enter twice. The bool value we changed it for success.
         AuthService.instance.registerUser(email: email, password: password) { (success) in
+            //If successful on this first pass...
             if success {
-                print("registered user")
+                print("User registered. Going through login now...")
+                //..Call on the service one more time to log in then user passing the same values..
+                AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
+                    //And if successful, print the following
+                    if success {
+                        print("User successfully logged in", AuthService.instance.authToken)
+                    } else {
+                        print ("error")
+                    }
+                })
             }
         }
     }
