@@ -97,8 +97,7 @@ class AuthService {
             "email": lowerCaseEmail,
             "password": password
         ]
-        
-        
+    
         //In thi scase, we need to have a completion handler with the capability to manage the JSON respose, considering that the API will return a token on a JSON format. This is called json parsing
         Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
             
@@ -134,6 +133,56 @@ class AuthService {
         }
     }
     
+    func createUser(name: String, email: String, avatarName: String, avatarColor: String, completion: @escaping CompletionHandler){
+        
+        let lowercasedEmail = email.lowercased()
+        
+        let body = [
+            "name": name,
+            "email": lowercasedEmail,
+            "avatarName": avatarName,
+            "avatarColor" : avatarColor
+        ]
+     
+        //This header brings another value that needs to be managed using the auth token. We need to get the token from the instance. WE CANNOT PULL IT JUST LIKE A PLAIN VALUE
+        let header = [
+            "Authorization" : "Bearer \(AuthService.instance.authToken)",
+             "Content-Type" : "application/json; charset=utf-8"
+        ]
+        
+        //We ake the http request as usual...
+        Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            
+            //... and we check for the respponse using SWIFTYJSON in this case...
+            if response.result.error == nil {
+                guard let data = response.data else {return}
+                let json  = JSON(data: data)
+                
+                //But for this one, we need to create a set of variables that will hold all the response variables coming from the api
+                let id = json["_id"].stringValue
+                let color = json["avatarColor"].stringValue
+                let avatarName = json["avatarName"].stringValue
+                let email = json["email"].stringValue
+                let name = json["name"].stringValue
+                
+                //And we pass that set of variables to the AuthService
+                UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+                completion(true)
+                
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+    }
     
     
     
