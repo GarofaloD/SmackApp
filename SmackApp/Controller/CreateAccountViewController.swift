@@ -38,7 +38,6 @@ class CreateAccountViewController: UIViewController {
         //Check for this text coming on this field, where the field cannot be empty. Else, return.
         guard let email = emailTxt.text , emailTxt.text != "" else { return }
         guard let password = passTxt.text , passTxt.text != "" else { return }
-        
         guard let name = usernameTxt.text , usernameTxt.text != "" else { return }
         
         
@@ -50,8 +49,9 @@ class CreateAccountViewController: UIViewController {
                 print("User registration in process. Going through login now...")
                 //..Call on the service one more time to log in then user passing the same values..
                 AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
-                    //And if successful, print the following
                     if success {
+                        print("User successfully logged in", AuthService.instance.authToken)
+                        //...Call on the service a third time to create the user
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if success {
                                 print("User completely registered!")
@@ -59,7 +59,6 @@ class CreateAccountViewController: UIViewController {
                                 self.performSegue(withIdentifier: UNWIND, sender: nil)
                             }
                         })
-                        print("User successfully logged in", AuthService.instance.authToken)
                     } else {
                         print ("error")
                     }
@@ -72,6 +71,7 @@ class CreateAccountViewController: UIViewController {
     
     
     @IBAction func pickedAvatarPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
     }
     
     

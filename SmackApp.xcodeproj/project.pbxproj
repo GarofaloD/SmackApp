@@ -13,6 +13,8 @@
 		8C16B2102164FF1500C524B4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C16B20F2164FF1500C524B4 /* ChatViewController.swift */; };
 		8C16B212216500BB00C524B4 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C16B211216500BB00C524B4 /* ChannelViewController.swift */; };
 		8C1D4EAA21752C390069B988 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1D4EA921752C390069B988 /* UserDataService.swift */; };
+		8C2B904B21811F0C005D3921 /* AvatarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B904A21811F0C005D3921 /* AvatarPickerViewController.swift */; };
+		8C2B904D218121E3005D3921 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B904C218121E3005D3921 /* AvatarCell.swift */; };
 		8C38E3772166CB61004FDDB0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38E3762166CB61004FDDB0 /* Constants.swift */; };
 		8C38E3792166D080004FDDB0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38E3782166D080004FDDB0 /* LoginViewController.swift */; };
 		8C38E37B2167B1EE004FDDB0 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38E37A2167B1EE004FDDB0 /* CreateAccountViewController.swift */; };
@@ -45,6 +47,8 @@
 		8C16B20F2164FF1500C524B4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8C16B211216500BB00C524B4 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChannelViewController.swift; path = /Users/danielgarofalo/Documents/Development/AppDev/IOS/Devslopes/Section11.SmackApp/SmackApp/SmackApp/Controller/ChannelViewController.swift; sourceTree = "<absolute>"; };
 		8C1D4EA921752C390069B988 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		8C2B904A21811F0C005D3921 /* AvatarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerViewController.swift; sourceTree = "<group>"; };
+		8C2B904C218121E3005D3921 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		8C38E3762166CB61004FDDB0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8C38E3782166D080004FDDB0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8C38E37A2167B1EE004FDDB0 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				8C16B211216500BB00C524B4 /* ChannelViewController.swift */,
 				8C38E3782166D080004FDDB0 /* LoginViewController.swift */,
 				8C38E37A2167B1EE004FDDB0 /* CreateAccountViewController.swift */,
+				8C2B904A21811F0C005D3921 /* AvatarPickerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			children = (
 				8CC7E2572166512600635095 /* GradientView.swift */,
 				8C803C7C21715CF20003E4B8 /* RoundedButton.swift */,
+				8C2B904C218121E3005D3921 /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,8 +387,10 @@
 				8C1D4EAA21752C390069B988 /* UserDataService.swift in Sources */,
 				8C16B2102164FF1500C524B4 /* ChatViewController.swift in Sources */,
 				8C803C7B2170F1550003E4B8 /* AuthService.swift in Sources */,
+				8C2B904B21811F0C005D3921 /* AvatarPickerViewController.swift in Sources */,
 				8CC7E2582166512600635095 /* GradientView.swift in Sources */,
 				8C38E37B2167B1EE004FDDB0 /* CreateAccountViewController.swift in Sources */,
+				8C2B904D218121E3005D3921 /* AvatarCell.swift in Sources */,
 				8C16B212216500BB00C524B4 /* ChannelViewController.swift in Sources */,
 				8C16B20B21642ECC00C524B4 /* SWRevealViewController.m in Sources */,
 				8C38E3772166CB61004FDDB0 /* Constants.swift in Sources */,
