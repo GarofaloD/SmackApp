@@ -27,6 +27,15 @@ class CreateAccountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //Refreshing thhis VC to show the avatar picked by the user
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName = UserDataService.instance.avatarName
+        }
+    }
+    
+    
     //When closing this window, it will take us to the main channels vc, hence the UNWIND identifier
     @IBAction func closeWhenPressed(_ sender: UIButton) {
         performSegue(withIdentifier: UNWIND, sender: nil)
@@ -40,8 +49,7 @@ class CreateAccountViewController: UIViewController {
         guard let password = passTxt.text , passTxt.text != "" else { return }
         guard let name = usernameTxt.text , usernameTxt.text != "" else { return }
         
-        
-        
+    
         //Pass both fields on the registration. To get extra values on the completion handler(which will be the third value that needs to be passed) just press enter twice. The bool value we changed it for success.
         AuthService.instance.registerUser(email: email, password: password) { (success) in
             //If successful on this first pass...
