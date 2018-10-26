@@ -25,6 +25,7 @@
 		8C475AE62164282000454EE7 /* SmackAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C475AE52164282000454EE7 /* SmackAppTests.swift */; };
 		8C803C7B2170F1550003E4B8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C803C7A2170F1550003E4B8 /* AuthService.swift */; };
 		8C803C7D21715CF20003E4B8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C803C7C21715CF20003E4B8 /* RoundedButton.swift */; };
+		8C8870A62182758F00D71574 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8870A52182758F00D71574 /* CircleImage.swift */; };
 		8CC7E2582166512600635095 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7E2572166512600635095 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		8C475AE72164282000454EE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C803C7A2170F1550003E4B8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8C803C7C21715CF20003E4B8 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		8C8870A52182758F00D71574 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		8CC7E2572166512600635095 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		B28FE01B9C6D9D87D50C1F5B /* Pods_SmackApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmackApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B6A12DE33F4FAEC4E682F3 /* Pods-SmackApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmackApp/Pods-SmackApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				8CC7E2572166512600635095 /* GradientView.swift */,
 				8C803C7C21715CF20003E4B8 /* RoundedButton.swift */,
 				8C2B904C218121E3005D3921 /* AvatarCell.swift */,
+				8C8870A52182758F00D71574 /* CircleImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				8C38E3792166D080004FDDB0 /* LoginViewController.swift in Sources */,
 				8C803C7D21715CF20003E4B8 /* RoundedButton.swift in Sources */,
 				8C475AD12164282000454EE7 /* AppDelegate.swift in Sources */,
+				8C8870A62182758F00D71574 /* CircleImage.swift in Sources */,
 				8C1D4EAA21752C390069B988 /* UserDataService.swift in Sources */,
 				8C16B2102164FF1500C524B4 /* ChatViewController.swift in Sources */,
 				8C803C7B2170F1550003E4B8 /* AuthService.swift in Sources */,
