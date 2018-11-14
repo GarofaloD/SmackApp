@@ -26,6 +26,8 @@
 		8C803C7B2170F1550003E4B8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C803C7A2170F1550003E4B8 /* AuthService.swift */; };
 		8C803C7D21715CF20003E4B8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C803C7C21715CF20003E4B8 /* RoundedButton.swift */; };
 		8C8870A62182758F00D71574 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8870A52182758F00D71574 /* CircleImage.swift */; };
+		8C9CC3EF219C7DDB00BDCC20 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC3ED219C7DDB00BDCC20 /* ProfileViewController.swift */; };
+		8C9CC3F0219C7DDB00BDCC20 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C9CC3EE219C7DDB00BDCC20 /* ProfileViewController.xib */; };
 		8CC7E2582166512600635095 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7E2572166512600635095 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		8C803C7A2170F1550003E4B8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8C803C7C21715CF20003E4B8 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		8C8870A52182758F00D71574 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		8C9CC3ED219C7DDB00BDCC20 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8C9CC3EE219C7DDB00BDCC20 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		8CC7E2572166512600635095 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		B28FE01B9C6D9D87D50C1F5B /* Pods_SmackApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmackApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B6A12DE33F4FAEC4E682F3 /* Pods-SmackApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmackApp/Pods-SmackApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				8C38E3782166D080004FDDB0 /* LoginViewController.swift */,
 				8C38E37A2167B1EE004FDDB0 /* CreateAccountViewController.swift */,
 				8C2B904A21811F0C005D3921 /* AvatarPickerViewController.swift */,
+				8C9CC3ED219C7DDB00BDCC20 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 		8C475ACF2164282000454EE7 /* SmackApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C9CC3F1219C7E0000BDCC20 /* XIBs */,
 				8C803C792170F12C0003E4B8 /* Services */,
 				8C38E3752166CB3A004FDDB0 /* Utilities */,
 				8C16B20E2164FEE500C524B4 /* Model */,
@@ -203,6 +209,14 @@
 				8C1D4EA921752C390069B988 /* UserDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8C9CC3F1219C7E0000BDCC20 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				8C9CC3EE219C7DDB00BDCC20 /* ProfileViewController.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		C42690CFC1FEFE119BC0EB57 /* Pods */ = {
@@ -303,6 +317,7 @@
 			files = (
 				8C475ADB2164282000454EE7 /* LaunchScreen.storyboard in Resources */,
 				8C475AD82164282000454EE7 /* Assets.xcassets in Resources */,
+				8C9CC3F0219C7DDB00BDCC20 /* ProfileViewController.xib in Resources */,
 				8C475AD62164282000454EE7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +411,7 @@
 				8C38E37B2167B1EE004FDDB0 /* CreateAccountViewController.swift in Sources */,
 				8C2B904D218121E3005D3921 /* AvatarCell.swift in Sources */,
 				8C16B212216500BB00C524B4 /* ChannelViewController.swift in Sources */,
+				8C9CC3EF219C7DDB00BDCC20 /* ProfileViewController.swift in Sources */,
 				8C16B20B21642ECC00C524B4 /* SWRevealViewController.m in Sources */,
 				8C38E3772166CB61004FDDB0 /* Constants.swift in Sources */,
 			);

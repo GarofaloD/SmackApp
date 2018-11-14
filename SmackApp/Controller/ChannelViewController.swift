@@ -24,7 +24,14 @@ class ChannelViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: GO_TO_LOGIN, sender: nil)
+        if AuthService.instance.isLoggedIn {
+            //show profile page
+            let profile = ProfileViewController()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: GO_TO_LOGIN, sender: nil)
+        }
     }
     
     //Modifying the avatar icon and login name on the channel vc with what we have on the UserDataService
@@ -34,7 +41,7 @@ class ChannelViewController: UIViewController {
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
             userImg.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
         } else {
-            loginButton.setTitle("login", for: .normal)
+            loginButton.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
         }

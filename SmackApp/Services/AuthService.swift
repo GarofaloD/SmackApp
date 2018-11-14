@@ -74,6 +74,7 @@ class AuthService {
         //Then, we need to add what we want to add a completion handler. A closure with responseString and we double Enter to access more parameters for the response. if there are no errors, the completion that we are managing sis true. Otherwise, it is false and we print an error
         
         
+        
         Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response) in
             
             //If there are no errors...
