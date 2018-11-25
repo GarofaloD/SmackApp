@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -222,14 +222,23 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logInWhenPressed:" destination="f2y-CY-Dog" eventType="touchUpInside" id="4aw-KL-OMw"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6pD-QQ-F1P">
+                                <rect key="frame" x="188.66666666666666" y="329.66666666666669" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6pD-QQ-F1P" firstAttribute="centerY" secondItem="fZQ-48-ahk" secondAttribute="centerY" constant="-100" id="0B9-24-u8B"/>
                             <constraint firstItem="EpE-PF-Buo" firstAttribute="top" secondItem="LYy-wV-AfK" secondAttribute="top" id="9ih-qN-oBi"/>
                             <constraint firstItem="eDr-Oi-dzq" firstAttribute="top" secondItem="R9m-yJ-bhb" secondAttribute="bottom" constant="40" id="MhX-cF-r1A"/>
                             <constraint firstItem="eDr-Oi-dzq" firstAttribute="centerX" secondItem="fZQ-48-ahk" secondAttribute="centerX" id="MoG-4F-iQK"/>
                             <constraint firstItem="LYy-wV-AfK" firstAttribute="trailing" secondItem="EpE-PF-Buo" secondAttribute="trailing" constant="20" id="RXO-vj-Oss"/>
+                            <constraint firstItem="6pD-QQ-F1P" firstAttribute="centerX" secondItem="fZQ-48-ahk" secondAttribute="centerX" id="Ree-Am-CXb"/>
                             <constraint firstItem="b6f-Mv-wG1" firstAttribute="top" secondItem="LYy-wV-AfK" secondAttribute="top" constant="60" id="bVD-Bm-do6"/>
                             <constraint firstItem="AyJ-od-XQB" firstAttribute="top" secondItem="eDr-Oi-dzq" secondAttribute="bottom" constant="8" id="oRJ-uj-HQD"/>
                             <constraint firstItem="b6f-Mv-wG1" firstAttribute="centerX" secondItem="fZQ-48-ahk" secondAttribute="centerX" id="pGH-49-Ghv"/>
@@ -240,6 +249,9 @@
                         <viewLayoutGuide key="safeArea" id="LYy-wV-AfK"/>
                     </view>
                     <connections>
+                        <outlet property="passwordText" destination="SZ4-KA-h39" id="3yl-GH-az1"/>
+                        <outlet property="spinner" destination="6pD-QQ-F1P" id="BgD-l0-pRf"/>
+                        <outlet property="userNameText" destination="yrj-Zz-PpD" id="m0H-ol-Gub"/>
                         <segue destination="iq3-BR-RQi" kind="show" identifier="goToCreateAccount" id="EbD-dZ-JWP"/>
                     </connections>
                 </viewController>

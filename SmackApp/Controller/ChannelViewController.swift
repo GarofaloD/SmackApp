@@ -23,6 +23,11 @@ class ChannelViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelViewController.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
     }
     
+    //Since at the point when the app opens up this view might have not been loaded, it wouyl dbe important to have a reload with the function that updates tyhe view itself.
+    override func viewDidAppear(_ animated: Bool) {
+        setUpUserInfo()
+    }
+    
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         if AuthService.instance.isLoggedIn {
             //show profile page
@@ -36,6 +41,11 @@ class ChannelViewController: UIViewController {
     
     //Modifying the avatar icon and login name on the channel vc with what we have on the UserDataService
     @objc func userDataDidChange(_ notif: Notification){
+        setUpUserInfo()
+    }
+    
+
+    func setUpUserInfo(){
         if AuthService.instance.isLoggedIn {
             loginButton.setTitle(UserDataService.instance.userName, for: .normal)
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
@@ -47,5 +57,5 @@ class ChannelViewController: UIViewController {
         }
     }
     
-
+    
 }

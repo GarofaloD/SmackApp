@@ -17,12 +17,14 @@ import SwiftyJSON
 
 class AuthService {
     
+    //MARK:- Properties / Instance Variables
     //Singeton accessible globally and being accessed one at the time during the lifetime of the app
     static let instance = AuthService()
     
     //Storing data permanently. Used for simple things. This is useful because it will help the user to not type the password everytime the app is open, for example
     let defaults = UserDefaults.standard
     
+
     //This will hold the status of a user logged in or not
     var isLoggedIn : Bool {
         get {
@@ -54,6 +56,7 @@ class AuthService {
         }
     }
     
+    //MARK:- Networking Functions
     //Creating web request to register the user. For this, we use Alamofire. Remember to import that library.
     func registerUser(email: String, password: String, completion: @escaping CompletionHandler){
         //Passing the email as lowercase string
@@ -134,6 +137,7 @@ class AuthService {
         }
     }
     
+    
     func createUser(name: String, email: String, avatarName: String, avatarColor: String, completion: @escaping CompletionHandler){
         
         let lowercasedEmail = email.lowercased()
@@ -145,49 +149,66 @@ class AuthService {
             "avatarColor" : avatarColor
         ]
      
-        //This header brings another value that needs to be managed using the auth token. We need to get the token from the instance. WE CANNOT PULL IT JUST LIKE A PLAIN VALUE
-        let header = [
-            "Authorization" : "Bearer \(AuthService.instance.authToken)",
-             "Content-Type" : "application/json; charset=utf-8"
-        ]
+//        //This header brings another value that needs to be managed using the auth token. We need to get the token from the instance. WE CANNOT PULL IT JUST LIKE A PLAIN VALUE
+//        let header = [
+//            "Authorization" : "Bearer \(AuthService.instance.authToken)",
+//             "Content-Type" : "application/json; charset=utf-8"
+//        ]
         
-        //We make the http request as usual...
-        Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+        //We make the http request as usual. In this case, the header is coming from the Constants. This header brings another value that needs to be managed using the auth token
+        Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             
             //... and we check for the respponse using SWIFTYJSON in this case...
             if response.result.error == nil {
                 guard let data = response.data else {return}
-                let json  = JSON(data: data)
+ 
+                //Function that will handle all elements coming from the api for this particular call
+                self.setUserInfo(data: data)
                 
-                //But for this one, we need to create a set of variables that will hold all the response variables coming from the api
-                let id = json["_id"].stringValue
-                let color = json["avatarColor"].stringValue
-                let avatarName = json["avatarName"].stringValue
-                let email = json["email"].stringValue
-                let name = json["name"].stringValue
-                
-                //And we pass that set of variables to the AuthService
-                UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
                 completion(true)
                 
             } else {
                 completion(false)
                 debugPrint(response.result.error as Any)
             }
-            
-            
-            
         }
-        
-        
-        
-        
-        
     }
     
     
+    func findUserByEmail(completion: @escaping CompletionHandler){
+        
+        let findUserURL = "\(URL_USER_BY_EMAIL)\(userEmail)"
+        
+        Alamofire.request(findUserURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            if response.result.error == nil{
+                guard let data = response.data else {return}
+                
+                //Function that will handle all elements coming from the api for this particular call
+                self.setUserInfo(data: data)
+ 
+                completion(true)
+                
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
     
     
+    //This are the response values that we will be getting fro the api for both the CreatingUser and LogIn User. Since we are going to be using the same in both places, we create ano7ther function to load stuff up
+    func setUserInfo(data: Data){
+
+        let json = JSON(data: data)
+        let id = json["_id"].stringValue
+        let color = json["avatarColor"].stringValue
+        let avatarName = json["avatarName"].stringValue
+        let email = json["email"].stringValue
+        let name = json["name"].stringValue
+        
+        //And we pass that set of variables to the AuthService
+        UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+    }
     
     
     
