@@ -31,6 +31,16 @@ class ChatViewController: UIViewController {
             }
         }
         
+        MessageService.instance.findAllChannels { (success) in
+            if success {
+                //print (MessageService.instance.channels)
+            }
+
+        }
+        
+        
+        
+        
         
     }
     
