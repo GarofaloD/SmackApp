@@ -129,6 +129,7 @@ class AuthService {
                 self.authToken = json["token"].stringValue
                 
                 self.isLoggedIn = true
+                //print(self.authToken)
                 completion(true)
             } else {
                 completion(false)

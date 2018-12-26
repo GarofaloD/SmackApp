@@ -34,8 +34,9 @@ class MessageService {
 //                        let description = item["description"].stringValue
 //                        let id = item["_id"].stringValue
 //
-//                        //And everytime we go through it, we create an object with te channel blueprint and we add it to the channles model
+//                        //And everytime we go through it, we create an object with te channel blueprint and we add it to the channels model
 //                        let channel = Channel(title: name, description: description, id: id)
+//
 //                        self.channels.append(channel)
 //                    }
 //                    print(self.channels)
@@ -50,14 +51,9 @@ class MessageService {
                     print("There was an error with the new json parsing method")
                     debugPrint(error as Any)
                 }
-                
+                print(AuthService.instance.authToken)
                 print(self.channels)
                 completion(true)
-                
-                
-                
-                
-                
                 
             } else {
                 completion(false)
